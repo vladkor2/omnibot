@@ -1,0 +1,9 @@
+{
+    "bot": {
+        "name": "MyPersonalBot",
+        "debug": false,
+        "admin_id": 494457956
+    },
+    "broadcast_chats2": [-1003520942411],
+    "broadcast_chats": [-1003520942411, -1003734593548]
+}

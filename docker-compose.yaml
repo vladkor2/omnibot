@@ -1,0 +1,20 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  telegram-bot:
+    build: .
+    container_name: telegram-bot
+    working_dir: /app
+    volumes:
+      - ./:/app  # Монтируем текущую директорию в контейнер
+    ports:
+      - "8443:8443"  # Для вебхуков (опционально)
+      - "80:80"      # Для вебхуков (опционально)
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    command: python3 bot.py  # Замените на имя вашего скрипта
+
+volumes:
+  bot_data:
